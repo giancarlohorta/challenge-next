@@ -2,7 +2,7 @@ import Home from "./pages/Home";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PokemonDetails from "./pages/PokemonDetails";
-// import FavoritePokemons from "./pages/FavoritePokemons/FavoritePokemons";
+import FavoritePokemons from "./pages/FavoritePokemons";
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path=":pokeId" element={<PokemonDetails />} />
-        {/* <Route path="/favorite-pokemons" element={<FavoritePokemons />} /> */}
+        <Route path="/favorite-pokemons" element={<FavoritePokemons />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,3 +1,7 @@
+### `npm install`
+
+run this command to install the dependences.
+
 ### `npm run start`
 
 Runs the app in the development mode.\
