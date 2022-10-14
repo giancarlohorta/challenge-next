@@ -1,6 +1,6 @@
 ### `npm install`
 
-run this command to install the dependences.
+Use this command to install the dependencies.
 
 ### `npm run start`
 

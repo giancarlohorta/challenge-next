@@ -10,6 +10,7 @@ import React from "react";
 import PokemonsList from "../../components/PokemonsList";
 import PageTitle from "../../components/PageTitle";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import Helmet from "react-helmet";
 
 const FavoritePokemons = () => {
   const { hasOnLocalStorage } = useLocalStorage("favorites");
@@ -17,6 +18,7 @@ const FavoritePokemons = () => {
   const isEmpty = hasOnLocalStorage.length === 0;
   return (
     <Container>
+      <Helmet title="Favorite Pokemons" />
       <Paper>
         <PageTitle>
           <Typography variant="h3">My Favorite Pokemons</Typography>
@@ -25,7 +27,6 @@ const FavoritePokemons = () => {
           </Button>
         </PageTitle>
         <Divider />
-
         {isEmpty ? (
           <Box
             py={3}

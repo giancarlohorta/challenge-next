@@ -18,6 +18,7 @@ import FavoriteButton from "../../components/FavoriteButton";
 import { useStyles } from "./PokemonDetails.styles";
 import PageTitle from "../../components/PageTitle";
 import ErrorComponent from "../../components/ErrorComponent";
+import Helmet from "react-helmet";
 
 const { FETCH_STATUS } = constants;
 
@@ -60,6 +61,7 @@ const PokemonDetails = () => {
   }, [fetchStatus]);
   return (
     <Container>
+      <Helmet title={functions.formatFirstLetterCapsLock(dataPokemon?.name)} />
       <Paper>
         <PageTitle>
           <Button variant="outlined" component="a" href="/">
@@ -94,7 +96,7 @@ const PokemonDetails = () => {
               ) : (
                 <img
                   className={classes.image}
-                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeId}.png`}
+                  src={urls.urlImage(pokeId)}
                   alt={dataPokemon?.name}
                 />
               )}

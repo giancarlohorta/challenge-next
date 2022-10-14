@@ -2,7 +2,7 @@ import Home from "./pages/Home";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PokemonDetails from "./pages/PokemonDetails";
-import FavoritePokemons from "./pages/FavoritePokemons";
+import FavoritePokemons from "./pages/FavoritePokemons/FavoritePokemons";
 
 const App = () => {
   return (

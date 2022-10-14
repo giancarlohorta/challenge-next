@@ -14,6 +14,7 @@ import useFetch from "../../hooks/useFetch";
 import urls from "../../helper/urls";
 import PageTitle from "../../components/PageTitle";
 import ErrorComponent from "../../components/ErrorComponent";
+import Helmet from "react-helmet";
 
 const { FETCH_STATUS, NUMBER_ITEMS } = constants;
 
@@ -39,6 +40,7 @@ const Home = () => {
   }, [page]);
   return (
     <Container>
+      <Helmet title="All Pokemons" />
       <Paper elevation={3}>
         <PageTitle>
           <Typography variant="h3">All Pokemons</Typography>

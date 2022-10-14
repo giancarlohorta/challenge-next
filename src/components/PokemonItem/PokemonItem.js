@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import functions from "../../helper/functions";
+import urls from "../../helper/urls";
 import { useStyles } from "./PokemonItem.styles";
 
 const PokemonItem = ({ number, name, loading }) => {
@@ -49,7 +50,7 @@ const PokemonItem = ({ number, name, loading }) => {
           ) : (
             <img
               className={classes.image}
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${number}.png`}
+              src={urls.urlImage(number)}
               alt={name}
             />
           )}

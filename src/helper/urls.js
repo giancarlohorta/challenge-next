@@ -5,9 +5,13 @@ const urlPokemons = (page, numberItens) =>
     (page - 1) * numberItens
   }&limit=${numberItens}`;
 
+const urlImage = (number) =>
+  `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${number}.png`;
+
 const urls = {
   urlDetails,
   urlPokemons,
+  urlImage,
 };
 
 export default urls;
